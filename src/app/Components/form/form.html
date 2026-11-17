@@ -1,0 +1,43 @@
+<div class="formulario">
+  <h2>Registrar producto - Lulosa</h2>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Código</mat-label>
+    <input matInput [(ngModel)]="producto.codigo" placeholder="LUL-011">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre del producto</mat-label>
+    <input matInput [(ngModel)]="producto.nombre" placeholder="Ej. Case para iPhone">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Categoría</mat-label>
+    <mat-select [(ngModel)]="producto.categoria">
+      <mat-option value="Protección">Protección</mat-option>
+      <mat-option value="Fundas">Fundas</mat-option>
+      <mat-option value="Accesorios">Accesorios</mat-option>
+      <mat-option value="Audio">Audio</mat-option>
+      <mat-option value="Cables">Cables</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dispositivo</mat-label>
+    <input matInput [(ngModel)]="producto.dispositivo" placeholder="Ej. iPhone 15">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Precio</mat-label>
+    <input matInput type="number" [(ngModel)]="producto.precio">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Stock</mat-label>
+    <input matInput type="number" [(ngModel)]="producto.stock">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="registrarProducto()">
+    Registrar producto
+  </button>
+</div>

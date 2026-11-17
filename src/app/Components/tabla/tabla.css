@@ -1,0 +1,14 @@
+.tabla-contenedor {
+	width: 100%;
+	overflow-x: auto;
+}
+
+table {
+	width: 100%;
+	min-width: 760px;
+}
+
+.sin-datos {
+	padding: 16px;
+	text-align: center;
+}

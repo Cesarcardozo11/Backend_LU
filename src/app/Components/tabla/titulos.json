@@ -1,0 +1,20 @@
+{
+  "id": "ID",
+  "codigo": "Código",
+  "nombre": "Nombre",
+  "apellido": "Apellido",
+  "categoria": "Categoría",
+  "dispositivo": "Dispositivo",
+  "precio": "Precio",
+  "stock": "Stock",
+  "email": "Email",
+  "edad": "Edad",
+  "sexo": "Sexo",
+  "fecha_creacion": "Fecha de creación",
+  "clienteId": "ID cliente",
+  "clienteNombre": "Cliente",
+  "fecha": "Fecha",
+  "productos": "Productos",
+  "total": "Total",
+  "estado": "Estado"
+}
