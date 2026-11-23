@@ -35,17 +35,17 @@ export class AuthController {
 
   static async registrar(req: Request, res: Response): Promise<void> {
     try {
-      const { nombre, apellido, email, password } = req.body;
+      const { nombre, apellido, edad, sexo, email, password } = req.body;
 
-      if (!nombre || !apellido || !email || !password) {
+      if (!nombre || !apellido || !edad || !sexo || !email || !password) {
         res.status(400).json({
           success: false,
-          message: 'Nombre, apellido, email y contraseña son requeridos'
+          message: 'Nombre, apellido, edad, sexo, email y contraseña son requeridos'
         });
         return;
       }
 
-      const result = await AuthModel.registrar({ nombre, apellido, email, password });
+      const result = await AuthModel.registrar({ nombre, apellido, edad, sexo, email, password });
 
       if (!result.success) {
         // 409 = conflicto: el email ya está registrado

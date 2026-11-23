@@ -51,10 +51,10 @@ export class AuthModel {
 
     // Se guarda el nuevo cliente y se devuelve sin la contraseña
     const result = await pool.query(
-      `INSERT INTO clientes (nombre, apellido, email, password)
-       VALUES ($1, $2, $3, $4)
+      `INSERT INTO clientes (nombre, apellido, edad, sexo, email, password)
+       VALUES ($1, $2, $3, $4, $5, $6)
        RETURNING id, nombre, apellido, edad, sexo, email, fecha_creacion`,
-      [cliente.nombre, cliente.apellido, cliente.email, cliente.password]
+      [cliente.nombre, cliente.apellido, cliente.edad, cliente.sexo, cliente.email, cliente.password]
     );
 
     return {
