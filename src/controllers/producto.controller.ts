@@ -57,6 +57,13 @@ export class ProductoController {
         data: nuevoProducto,
       });
     } catch (error) {
+      // 23505 es el código de PostgreSQL para "valor repetido" (el código del producto es UNIQUE)
+      if ((error as { code?: string }).code === '23505') {
+        return res.status(409).json({
+          success: false,
+          message: 'Ya existe un producto con ese código',
+        });
+      }
       res.status(500).json({
         success: false,
         message: 'Error al crear el producto',
