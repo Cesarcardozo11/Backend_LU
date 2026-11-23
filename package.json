@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node dist/serve.js",
     "db:probar": "ts-node-dev --transpile-only src/probar-db.ts",
+    "db:crear": "ts-node-dev --transpile-only src/crear-db.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
