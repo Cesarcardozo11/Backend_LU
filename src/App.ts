@@ -29,6 +29,7 @@ app.get('/api/v1/health', (req, res) => {
 
 // Configurar rutas
 app.post('/api/auth/login', AuthController.login);
+app.post('/api/auth/registro', AuthController.registrar);
 app.use('/api/clientes', clientesRoutes);
 app.use('/api/v1/productos', productosRoutes);
 app.use('/api/v1/compras', comprasRoutes);

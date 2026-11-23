@@ -37,4 +37,30 @@ export class AuthModel {
       user: cliente
     };
   }
+
+  static async registrar(cliente: Cliente): Promise<LoginResponse> {
+    // El email no se puede repetir: si ya existe, no se registra
+    const existe = await pool.query('SELECT id FROM clientes WHERE email = $1', [cliente.email]);
+
+    if (existe.rows.length > 0) {
+      return {
+        success: false,
+        message: 'Ya existe un usuario con ese email'
+      };
+    }
+
+    // Se guarda el nuevo cliente y se devuelve sin la contraseña
+    const result = await pool.query(
+      `INSERT INTO clientes (nombre, apellido, email, password)
+       VALUES ($1, $2, $3, $4)
+       RETURNING id, nombre, apellido, edad, sexo, email, fecha_creacion`,
+      [cliente.nombre, cliente.apellido, cliente.email, cliente.password]
+    );
+
+    return {
+      success: true,
+      message: 'Usuario registrado',
+      user: result.rows[0]
+    };
+  }
 }
