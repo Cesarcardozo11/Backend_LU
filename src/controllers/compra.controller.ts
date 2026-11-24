@@ -1,3 +1,5 @@
+// CONTROLADOR de compras: lee la petición, llama al modelo y responde con un código HTTP.
+// Mismo patrón que producto.controller.ts (ver sus comentarios).
 import { Request, Response } from 'express';
 import { CompraModel } from '../models/compra.model';
 

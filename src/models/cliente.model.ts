@@ -1,3 +1,6 @@
+// MODELO de clientes: el único que escribe SQL sobre la tabla clientes.
+// COLUMNAS (más abajo) = las columnas que se devuelven: nunca incluye la contraseña.
+// Mismo patrón que producto.model.ts (ver sus comentarios).
 import pool from '../config/db';
 
 export interface Cliente {

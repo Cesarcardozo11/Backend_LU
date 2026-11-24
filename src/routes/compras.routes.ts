@@ -1,3 +1,5 @@
+// RUTAS de compras: cada URL + método HTTP llama a una función del controlador.
+// Mismo patrón que productos.routes.ts (ver sus comentarios).
 import { Router } from 'express';
 import { CompraController } from '../controllers/compra.controller';
 

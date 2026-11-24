@@ -1,3 +1,5 @@
+// CONTROLADOR de autenticación: login (200 / 401) y registro (201 / 409).
+// 400 = faltan datos | 401 = email o contraseña incorrectos | 409 = el email ya existe
 import type { Request, Response } from 'express';
 import { AuthModel } from '../models/auth.model';
 import logger from '../utils/logger';

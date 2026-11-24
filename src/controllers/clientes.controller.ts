@@ -1,3 +1,6 @@
+// CONTROLADOR de clientes: lee la petición, llama al modelo y responde con un código HTTP.
+// Aquí las funciones son 'export const' (flechas) en vez de una clase con 'static'; hacen lo mismo.
+// Mismo patrón que producto.controller.ts (ver sus comentarios).
 import { Request, Response } from 'express';
 import { ClienteModel } from '../models/cliente.model';
 import logger from '../utils/logger';

@@ -1,3 +1,5 @@
+// MODELO de autenticación: busca al usuario para el login y crea usuarios en el registro.
+// Nunca devuelve la contraseña al frontend.
 import pool from '../config/db';
 import type { Cliente } from './cliente.model';
 

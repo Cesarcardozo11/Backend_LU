@@ -1,3 +1,6 @@
+// MODELO de compras: escribe el SQL de las tablas compras y compra_productos.
+// JOIN = une dos tablas en una consulta (compras + clientes para traer el nombre).
+// Transacción (BEGIN / COMMIT / ROLLBACK) = guardar en las dos tablas o en ninguna.
 import type { PoolClient } from 'pg';
 import pool from '../config/db';
 
